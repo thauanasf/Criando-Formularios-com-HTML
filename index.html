@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<h1>
+    Formulários HTML
+</h1>
+    <p>
+        Um formulário HTML é usado para coletar a entrada do usuário. A entrada do usuário é mais frequentemente enviada a um servidor para processamento.
+    </p>
+<body>
+    <h1>O elemento "form"
+    </h1>
+    <p>O elemento HTML"form" é usado para criar um formulário HTML para entrada do usuário:
+        <form>
+            .
+            form elements
+            .
+
+        </form> </p>
+    <h1>
+        O elemento "input"
+    </h1>
+    <p>
+        O elemento HTML <input>é o elemento de formulário mais usado. Um "input"elemento pode ser exibido de várias maneiras, dependendo do type atributo.
+    </p>
+    <h1>
+        Campos de texto
+    </h1>
+    <p>
+        Define uma entrada de linha única para a entrada de texto.
+    Exemplo:
+</p>
+      <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname"> Last name:</label><br>
+        <input type="text" id="lname" name="lname">
+      </form>
+
+      <h1>O elemento "label" </h1>
+      <p>
+        Observe o uso do <label>elemento no exemplo acima.
+
+            A <label>tag define um rótulo para muitos elementos de formulário.
+            
+            O <label>elemento é útil para usuários de leitores de tela, porque o leitor de tela lerá em voz alta o rótulo quando o usuário focar no elemento de entrada.
+            
+            O <label>elemento também ajuda os usuários que têm dificuldade em clicar em regiões muito pequenas (como botões de opção ou caixas de seleção) - porque quando o usuário clica no texto dentro do <label>elemento, ele alterna o botão de opção/caixa de seleção.
+            
+            O foratributo da <label>tag deve ser igual ao idatributo do <input> elemento para ligá-los.
+      </p>
+
+      <h1> Botões do rádio</h1>
+       <p>O <input type="radio">define um botão de rádio.
+
+        Os botões de opção permitem que o usuário selecione UMA dentre um número limitado de opções.
+        
+        Exemplo
+         </p>
+         <p>Choose your favorite Web language:</p>
+
+         <form>
+           <input type="radio" id="html" name="fav_language" value="HTML">
+           <label for="html">HTML</label><br>
+           <input type="radio" id="css" name="fav_language" value="CSS">
+           <label for="css">CSS</label><br>
+           <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+           <label for="javascript">JavaScript</label>
+         </form>
+<h1>
+    Caixas de seleção
+</h1>
+ <p>
+    O <input type="checkbox">define uma caixa de seleção .
+
+As caixas de seleção permitem que um usuário selecione ZERO ou MAIS opções de um número limitado de opções.
+
+Exemplo
+ </p>
+ <form>
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1"> I have a bike</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+    <label for="vehicle2"> I have a car</label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+    <label for="vehicle3"> I have a boat</label>
+  </form>
+<h1>
+    Botão enviar 
+</h1>
+<p>
+    O <input type="submit">define um botão para enviar os dados do formulário para um manipulador de formulários.
+
+O manipulador de formulário geralmente é um arquivo no servidor com um script para processar dados de entrada.
+
+O manipulador de formulário é especificado no action atributo do formulário.
+
+Exemplo:
+</p>
+<form action="/action_page.php">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <h1>O atributo de nome para <input>
+  </h1>
+<p>
+    Observe que cada campo de entrada deve ter um nameatributo a ser enviado.
+
+Se o name atributo for omitido, o valor do campo de entrada não será enviado.
+Exemplo:
+</p>
+<form action="/action_page.php">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" value="John"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
