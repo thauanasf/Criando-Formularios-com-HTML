@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos de formulário html</title>
+</head>
+<h1>
+    Atributos de formulário HTML
+</h1>
+<p>
+    Este capítulo descreve os diferentes atributos para o <form>elemento HTML.
+</p>
+<h2>
+    O atributo de ação
+</h2>
+<p>
+    O actionatributo define a ação a ser executada quando o formulário for enviado.
+
+Normalmente, os dados do formulário são enviados para um arquivo no servidor quando o usuário clica no botão enviar.
+
+No exemplo abaixo, os dados do formulário são enviados para um arquivo chamado "action_page.php". Este arquivo contém um script do lado do servidor que manipula os dados do formulário:
+Exemplo:
+</p>
+<form action="/action_page.php">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <h2>
+    O atributo alvo
+  </h2>
+  <p>
+    O target atributo especifica onde exibir a resposta recebida após o envio do formulário.
+
+O target atributo pode ter um dos seguintes valores:_blank _self _parent _top framename
+
+</p>
+
+<h2> O atributo de método</h2>
+<html> O method atributo especifica o método HTTP a ser usado ao enviar os dados do formulário.
+
+    Os dados do formulário podem ser enviados como variáveis ​​de URL (com method="get") ou como transação de postagem HTTP (com method="post").
+    
+    O método HTTP padrão ao enviar dados de formulário é GET.
+    </html>
+     
+    <h2>
+        O atributo de preenchimento automático
+    </h2>
+<p>
+    O autocompleteatributo especifica se um formulário deve ter o preenchimento automático ativado ou desativado.
+
+Quando o preenchimento automático está ativado, o navegador completa automaticamente os valores com base nos valores que o usuário inseriu anteriormente.
+</p>
+<h2>
+    O atributo Novalidate
+</h2>
+<p>
+    O novalidateatributo é um atributo booleano.
+
+Quando presente, especifica que os dados do formulário (entrada) não devem ser validados quando enviados.
+</p>
+
+
+<body>
+    
+</body>
+</html>
