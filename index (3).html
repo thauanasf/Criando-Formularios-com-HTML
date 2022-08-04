@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <title>
+            Elementos de Formulário
+        </title>
+
+    </head>
+<h1>Os elementos HTML </h1>
+<p>
+    O elemento HTML "form" pode conter um ou mais dos seguintes elementos de formulário:
+
+        "input"
+        "label"
+        "select"
+        "textarea"
+        "button"
+        "fieldset"
+        "legend"
+        "datalist"
+        "output"
+        "option"
+        "optgroup"
+</p>
+
+ <h2>O elemento <input> </h2>
+ <p>Um dos elementos de formulário mais usados ​​é o <input>elemento.
+
+    O <input>elemento pode ser exibido de várias maneiras, dependendo do type atributo.
+Exemplo: </p>
+>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h2>O elemento <select></select>
+</h2><p>
+    Elemento que define uma lista suspensa:
+
+</p>
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <input type="submit">
+</form>
+<p>Os <option>elementos definem uma opção que pode ser selecionada.
+
+    Por padrão, o primeiro item na lista suspensa é selecionado.
+    
+    Para definir uma opção pré-selecionada, adicione o selectedatributo à opção:
+Exemplo</p>
+
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat" selected>Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+<input type="submit">
+</form>
+<h3>Valores visíveis</h3>
+<p>
+    Use o sizeatributo para especificar o número de valores visíveis:
+    Exemplo:
+</p>
+>
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="3">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+  <input type="submit">
+</form>
+<h3>Permitir várias seleções:</h3>
+<p>
+    Use o multipleatributo para permitir que o usuário selecione mais de um valor:
+    Exemplo
+</p>
+
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars" size="4" multiple>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select><br><br>
+<input type="submit">
+</form>
+
+<p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+<h3>
+    O elemento <textarea></textarea>
+</h3>
+<p>O <textarea>elemento define um campo de entrada de várias linhas (uma área de texto):</p>
+
+    <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+    <br><br>
+    <input type="submit">
+  </form>
+  
+  <h3> O elemento <button></button></h3>
+<p> 
+    O <button>elemento define um botão clicável:
+        Exemplo
+</p>
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+<h3>
+    Os elementos <fieldset></fieldset> e <legend></legend>
+</h3>
+<p>
+    O <fieldset>elemento é usado para agrupar dados relacionados em um formulário.
+
+        O <legend>elemento define uma legenda para o <fieldset> elemento.
+        </p>
+        <form action="/action_page.php">
+            <fieldset>
+              <legend>Personalia:</legend>
+              <label for="fname">First name:</label><br>
+              <input type="text" id="fname" name="fname" value="John"><br>
+              <label for="lname">Last name:</label><br>
+              <input type="text" id="lname" name="lname" value="Doe"><br><br>
+              <input type="submit" value="Submit">
+            </fieldset>
+          </form>
+
+          <h3>
+            O elemento "datalist"
+          </h3>
+          <p>
+            O "datalist" elemento especifica uma lista de opções predefinidas para um <input>elemento.
+
+                Os usuários verão uma lista suspensa das opções predefinidas à medida que inserem dados.
+                
+                O listatributo do <input>elemento deve se referir ao idatributo do "datalist"elemento.
+          </p>
+
+          <form action="/action_page.php">
+            <input list="browsers">
+            <datalist id="browsers">
+              <option value="Internet Explorer">
+              <option value="Firefox">
+              <option value="Chrome">
+              <option value="Opera">
+              <option value="Safari">
+            </datalist>
+          </form>
+
+          <h3>
+            O elemento "output"
+          </h3>
+          <p>
+            O <output>elemento representa o resultado de um cálculo (como um realizado por um script).
+          </p>
+          <form action="/action_page.php"
+  oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range"  id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+
+    <body>
+
+
+    </body>
+</html>
