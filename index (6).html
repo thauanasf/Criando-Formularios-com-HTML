@@ -1,0 +1,156 @@
+<html>
+    
+<head>
+<title>
+    Formulário de entrada HTML * Atributos
+</title>
+</head>
+    <body>
+<h1 style="text-align:center;">
+    Formulário de entrada HTML * Atributos
+</h1>
+<h2>
+    O atributo de formulário
+</h2>
+<p>
+    formO atributo input especifica o formulário ao qual o <input>elemento pertence.
+
+O valor deste atributo deve ser igual ao atributo id do elemento <form> ao qual ele pertence.
+<br>
+Exemplo:
+</p>
+<form action="/action_page.php" id="form1">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" form="form1">
+  <h2>
+    O atributo de formação
+  </h2>
+<p>
+    O atributo input formaction especifica a URL do arquivo que processará a entrada quando o formulário for enviado.
+
+    Nota: Este atributo substitui o action atributo do <form>elemento.
+    
+    O formaction atributo funciona com os seguintes tipos de entrada: submit e image.
+    <br>
+    Exemplo: 
+</p>
+<form action="/action_page.php">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <input type="submit" value="Submit">
+    <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+  </form>
+
+<h2>
+    O atributo formenctype 
+</h2>
+<p>
+    O atributo input formenctype especifica como os dados do formulário devem ser codificados quando enviados (somente para formulários com method="post").
+
+Nota: Este atributo substitui o atributo enctype do <form>elemento.
+
+O formenctype atributo funciona com os seguintes tipos de entrada: submit e image.
+<br>
+Exemplo:
+</p>
+<form action="/action_page_binary.asp" method="post">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <input type="submit" value="Submit">
+    <input type="submit" formenctype="multipart/form-data"
+    value="Submit as Multipart/form-data">
+  </form>
+  <h2>
+    O atributo formmethod
+  </h2>
+  <p>O atributo input formmethod define o método HTTP para enviar dados de formulário para a URL de ação.<br>
+
+Nota: Este atributo substitui o atributo method do <p>elemento.<br>
+
+O formmethod atributo funciona com os seguintes tipos de entrada: submit e image.<br>
+
+Os dados do formulário podem ser enviados como variáveis ​​de URL (method="get") ou como uma transação HTTP post (method="post").<br><br>
+
+Observações sobre o método "get":<br>
+</p>
+<div style="background-color:blueviolet ;">
+Este método anexa os dados do formulário à URL em pares nome/valor<br>
+Este método é útil para envios de formulários em que um usuário deseja marcar o resultado<br>
+Existe um limite para a quantidade de dados que você pode colocar em um URL (varia entre os navegadores), portanto, você não pode ter certeza de que todos os dados do formulário serão transferidos corretamente<br>
+Nunca use o método "get" para passar informações confidenciais! (senha ou outras informações confidenciais estarão visíveis na barra de endereços do navegador)<br>
+Notas sobre o método "post":<br><br>
+Este método envia os dados do formulário como uma transação HTTP post<br>
+Os envios de formulários com o método "post" não podem ser marcados como favoritos<br>
+O método "post" é mais robusto e seguro do que "get", e "post" não possui limitações de tamanho<br>
+Exemplo:
+</div>
+<form action="/action_page.php" method="get">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <input type="submit" value="Submit using GET">
+    <input type="submit" formmethod="post" value="Submit using POST">
+  </form>
+
+  <h2>
+    O atributo formtarget
+  </h2>
+  <p>
+    O atributo input formtarget especifica um nome ou uma palavra-chave que indica onde exibir a resposta recebida após o envio do formulário.<br>
+
+Observação: esse atributo substitui o atributo de destino do <form>elemento.<br>
+
+O formtargetatributo funciona com os seguintes tipos de entrada: submit e image.<br>
+ Exemplo: </p>
+ <form action="/action_page.php">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <input type="submit" value="Submit">
+    <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+  </form>
+  <h2>
+    O atributo formnovalidate  
+  </h2>
+<p>
+    O atributo input formnovalidate especifica que um elemento <input> não deve ser validado quando submetido.
+
+Nota: Este atributo substitui o atributo novalidate do <form> elemento.
+
+O formnovalidateatributo funciona com os seguintes tipos de entrada: submit.
+<br>
+Exemplo:</p>
+<form action="/action_page.php">
+    <label for="email">Enter your email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <input type="submit" value="Submit">
+    <input type="submit" formnovalidate="formnovalidate"
+    value="Submit without validation">
+  </form>
+  <h2>
+    O atributo novalidate
+  </h2>
+  <p>
+    O novalidateatributo é um <form>atributo.
+
+        Quando presente, novalidate especifica que todos os dados do formulário não devem ser validados quando enviados.
+  <br>Exemplo:</p>
+  <form action="/action_page.php" novalidate>
+    <label for="email">Enter your email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+
+    </body>
+    
+</html>
