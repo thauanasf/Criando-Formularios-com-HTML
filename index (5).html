@@ -1,0 +1,267 @@
+<html>
+    <head>
+        <title>
+            Atributo de entrada HTML
+        </title>
+<h1 style="text-align: center;">
+    Atributos de entrada HTML
+</h1>
+<h2>
+    O atributo de valor
+</h2>
+<p>
+    O atributo input value especifica um valor inicial para um campo de entrada:
+  <br> Exemplo:
+</p>
+<form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe">
+  </form>
+
+  <h2>
+    O atributo readonly 
+  </h2>
+  <p>
+    O readonlyatributo input especifica que um campo de entrada é somente leitura.
+
+Um campo de entrada somente leitura não pode ser modificado (no entanto, um usuário pode tabular até ele, realçá-lo e copiar o texto dele).
+
+O valor de um campo de entrada somente leitura será enviado ao enviar o formulário!
+<br>Exemplo:
+  </p>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John" readonly><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe">
+  </form>
+  <h2>
+    O atributo desabilitado
+  </h2> 
+  <p>
+    O disabledatributo input especifica que um campo de entrada deve ser desabilitado.
+
+    Um campo de entrada desativado é inutilizável e não pode ser clicado.
+    
+    O valor de um campo de entrada desabilitado não será enviado ao enviar o formulário!
+  <br> Exemplo:</p>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John" disabled><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe">
+  </form>
+
+  <h2>
+    O atributo tamanho
+  </h2>
+  <p>
+    O atributo input sizeespecifica a largura visível, em caracteres, de um campo de entrada.
+
+O valor padrão para sizeé 20.
+
+Observação: o sizeatributo funciona com os seguintes tipos de entrada: texto, pesquisa, tel, url, email e senha.
+<br>Exemplo:  </p>
+<form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" size="50"><br>
+    <label for="pin">PIN:</label><br>
+    <input type="text" id="pin" name="pin" size="4">
+  </form>
+  <h2>
+    O atributo maxlength
+  </h2>
+  <p>
+    O maxlengthatributo de entrada especifica o número máximo de caracteres permitidos em um campo de entrada.
+
+Nota: Quando a maxlengthé definido, o campo de entrada não aceitará mais do que o número especificado de caracteres. No entanto, esse atributo não fornece nenhum feedback. Portanto, se você deseja alertar o usuário, deve escrever o código JavaScript.
+<br>
+Exemplo
+  </p>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" size="50"><br>
+    <label for="pin">PIN:</label><br>
+    <input type="text" id="pin" name="pin" maxlength="4" size="4">
+  </form>
+
+</head>
+<h2>
+    Os atributos mínimo e máximo 
+</h2>
+<p>
+    A entrada mine maxos atributos especificam os valores mínimo e máximo para um campo de entrada.
+
+Os atributos mine funcionam com os seguintes tipos de entrada: número, intervalo, data, data e hora local, mês, hora e semana.max
+
+Dica: Use os atributos max e min juntos para criar um intervalo de valores válidos.
+<br>
+Exemplo
+</p>
+<form>
+    <label for="datemax">Enter a date before 1980-01-01:</label>
+    <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+  
+    <label for="datemin">Enter a date after 2000-01-01:</label>
+    <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+  
+    <label for="quantity">Quantity (between 1 and 5):</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="5">
+  </form>
+  <h2>
+    O atributo múltiplo
+  </h2>
+  <p>
+    O atributo input multipleespecifica que o usuário tem permissão para inserir mais de um valor em um campo de entrada.
+
+    O multipleatributo funciona com os seguintes tipos de entrada: email e arquivo.
+    <br>
+    Exemplo 
+  </p>
+  <form>
+    <label for="files">Select files:</label>
+    <input type="file" id="files" name="files" multiple>
+  </form>
+
+  <h2>
+    O atributo padrão
+  </h2>
+  <p>
+    O atributo input patternespecifica uma expressão regular com a qual o valor do campo de entrada é verificado quando o formulário é enviado.
+
+O patternatributo funciona com os seguintes tipos de entrada: texto, data, pesquisa, url, tel, email e senha.
+
+Dica: Use o atributo global title para descrever o padrão para ajudar o usuário.
+
+<br>Exemplo:
+  </p>
+  <form>
+    <label for="country_code">Country code:</label>
+    <input type="text" id="country_code" name="country_code"
+    pattern="[A-Za-z]{3}" title="Three letter country code">
+  </form>
+  <h2>
+    O atributo placeholder
+  </h2>
+  <p>
+    O atributo input placeholderespecifica uma dica curta que descreve o valor esperado de um campo de entrada (um valor de amostra ou uma breve descrição do formato esperado).
+
+A dica curta é exibida no campo de entrada antes que o usuário insira um valor.
+
+O placeholderatributo funciona com os seguintes tipos de entrada: texto, pesquisa, url, tel, email e senha
+<br>Exemplo:
+  </p>
+  <form>
+    <label for="phone">Enter a phone number:</label>
+    <input type="tel" id="phone" name="phone"
+    placeholder="123-45-678"
+    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+  </form>
+
+  <h2>O atributo necessário</h2>
+  <p>
+    O requiredatributo input especifica que um campo de entrada deve ser preenchido antes de enviar o formulário.
+
+O requiredatributo funciona com os seguintes tipos de entrada: text, search, url, tel, email, password, date pickers, number, checkbox, radio e file.
+<br>
+Exemplo
+  </p>
+  <form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+  </form>
+  <h2>
+    O atributo step
+  </h2>
+  <p>
+    O atributo input stepespecifica os intervalos de números legais para um campo de entrada.
+
+Exemplo: if step="3", os números legais podem ser -3, 0, 3, 6, etc.
+
+Dica: Este atributo pode ser usado junto com os atributos max e min para criar um intervalo de valores válidos.
+
+O stepatributo funciona com os seguintes tipos de entrada: número, intervalo, data, data e hora local, mês, hora e semana.
+  <br>Exemplo:</p>
+  <form>
+    <label for="points">Points:</label>
+    <input type="number" id="points" name="points" step="3">
+  </form>
+  <h2>
+    O atributo foco automático
+  </h2>
+  <p>
+    O autofocusatributo input especifica que um campo de entrada deve obter foco automaticamente quando a página for carregada.
+    <br>Exemplo:
+  </p>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" autofocus><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname">
+  </form>
+  <h2>
+    Os atributos de altura e largura
+  </h2>
+  <p>
+    A entrada heighte widthos atributos especificam a altura e a largura de um <input type="image">elemento.
+    <br><negrito>
+        Dica: Sempre especifique os atributos de altura e largura para imagens. Se a altura e a largura forem definidas, o espaço necessário para a imagem será reservado quando a página for carregada. Sem esses atributos, o navegador não sabe o tamanho da imagem e não pode reservar o espaço apropriado para ela. O efeito será que o layout da página mudará durante o carregamento (enquanto as imagens são carregadas).
+    </negrito>
+    <br>Exemplo:
+  </p>
+  <form>
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+  </form>
+
+  <h2>
+    O atributo lista
+  </h2>
+  <p>
+    listO atributo input refere-se a um <datalist>elemento que contém opções pré-definidas para um elemento <input>.
+<br>
+        Exemplo:
+  </p>
+  <form>
+    <input list="browsers">
+    <datalist id="browsers">
+      <option value="Internet Explorer">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
+  </form>
+
+  <h2>
+    O atributo preenchimento automático
+  </h2>
+  <p>
+    O atributo input autocomplete especifica se um formulário ou um campo de entrada deve ter o preenchimento automático ativado ou desativado.
+
+O preenchimento automático permite que o navegador preveja o valor. Quando um usuário começa a digitar em um campo, o navegador deve exibir opções para preencher o campo, com base nos valores digitados anteriormente.
+
+O autocompleteatributo funciona com <form>os seguintes <input>tipos: texto, pesquisa, url, tel, email, senha, datepickers, intervalo e cor.
+<br>
+Exemplo:
+  </p>
+  <form action="/action_page.php" autocomplete="on">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" autocomplete="off"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+
+    <body>
+        
+    </body>
+</html>
